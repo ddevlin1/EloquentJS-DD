@@ -10,3 +10,11 @@ $(document).on('click', '.panel-heading span.clickable', function (e) {
 		$this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
 	}
 })
+
+
+function callFunction(fName){
+  var t0 = performance.now();
+  window[fName]();
+  var t1 = performance.now();
+  document.getElementById('lblTimer').value = Math.round((t1-t0)*1000)/1000;
+}

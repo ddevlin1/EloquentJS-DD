@@ -4,13 +4,6 @@ var onMouseClick = function (e) {
 
 document.body.addEventListener("click", onMouseClick);
 
-function callFunction(fName){
-  var t0 = performance.now();
-  window[fName]();
-  var t1 = performance.now();
-  document.getElementById('lblTimer').value = t1-t0;
-}
-
 function onTriangleButtonClick() {
 	var line = "#";
 
