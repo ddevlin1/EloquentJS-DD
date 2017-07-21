@@ -7,29 +7,24 @@ document.body.addEventListener("click", onMouseClick);
 function onTriangleButtonClick() {
 	var line = "#";
 
-	for (i = 0; i < 10; i++) {
+	for (i = 0; i < 7; i++) {
 		console.log(line);
 		line += "#";
 	}
 }
 
 function fizzBuzzClick() {
-	for (i = 1; i < 101; i++) {
+	for (i = 1; i <= 100; i++) {
 		s = "";
 		if (i % 3 == 0)
 			s += "Fizz";
 		if (i % 5 == 0)
 			s += "Buzz";
-		if (s == "")
-			console.log(i);
-		else
-			console.log(s);
+		console.log(s||i);
 	}
 }
 
 function chessBoard(size) {
-  var day = new Date();
-  var startTime = day.getTime();
   var tmp;
   if(!size)
     size = document.getElementById('btnChess').value;
@@ -54,7 +49,5 @@ function chessBoard(size) {
     output += "\n";
   }
 
-  var x = new Date();
   console.log(output);
-  console.log(x.getTime() - startTime);
 }
